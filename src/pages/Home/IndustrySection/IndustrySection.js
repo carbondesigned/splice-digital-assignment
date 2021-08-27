@@ -10,7 +10,6 @@ import Button from "../../../components/Button";
 import { StyledIndustrySection } from "./IndustrySection.styles";
 
 // Icons
-import { BsArrowLeft } from "react-icons/bs";
 
 // img
 import img1 from "../../../assets/img/industry-img.png";

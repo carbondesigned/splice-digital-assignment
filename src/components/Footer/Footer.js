@@ -5,10 +5,6 @@ import { StyledFooter } from "./Footer.styles";
 // Logos
 import logo from "../../assets/logos/teradyne-logo-s.png";
 import tugxLogo from "../../assets/logos/tugx-c.png";
-import twitter from "../../assets/logos/twitter.svg";
-import linkedin from "../../assets/logos/linkedin.svg";
-import youtube from "../../assets/logos/youtube.svg";
-import facebook from "../../assets/logos/facebook.svg";
 import careers from "../../assets/logos/twitter-careers.svg";
 
 import {

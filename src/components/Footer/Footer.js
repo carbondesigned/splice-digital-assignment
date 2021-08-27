@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <div className="logo">
-        <img src={logo} alt="teradyne logo" />
+        <h2>Teradyne</h2>
       </div>
       <div className="main">
         <ul className="links">

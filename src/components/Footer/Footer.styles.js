@@ -5,9 +5,13 @@ export const StyledFooter = styled.footer`
   padding: 0 2em;
 
   .logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    h2 {
+      font-size: 5em;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 1em 0;
+    }
 
     img {
       max-width: 50%;
@@ -21,12 +25,13 @@ export const StyledFooter = styled.footer`
     justify-content: space-between;
 
     .links {
-      width: 35%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 1em;
       text-align: center;
-      justify-content: space-evenly;
+      padding: 0;
+      margin: 0;
 
       .link {
         list-style: none;
@@ -43,9 +48,8 @@ export const StyledFooter = styled.footer`
       .newsletter {
         display: flex;
         flex-direction: column;
-        padding: 0 5em;
+        padding: 5em 0;
         text-align: center;
-        margin: 5em 0;
 
         input {
           border: none;
@@ -62,8 +66,7 @@ export const StyledFooter = styled.footer`
         display: flex;
         align-items: center;
         width: 100%;
-        justify-content: flex-end;
-        /* padding: 1em 5em; */
+        justify-content: center;
         gap: 2em;
 
         img {
@@ -83,7 +86,7 @@ export const StyledFooter = styled.footer`
     display: flex;
     align-items: center;
     gap: 2em;
-    padding-bottom: 5em;
+    padding: 5em 0;
 
     .copy-links {
       display: flex;
@@ -98,26 +101,32 @@ export const StyledFooter = styled.footer`
 
   @media only screen and (min-width: 1024px) {
     padding: 0 10em;
+
     .logo {
       justify-content: flex-start;
+      text-align: left;
     }
     .main {
       flex-direction: row;
 
       .links {
         text-align: left;
+        display: flex;
+        gap: 1em;
         flex-direction: row;
-        /* padding: 0 5em; */
-        flex-wrap: wrap;
 
         .col {
           display: flex;
           flex-direction: column;
+          flex: 50%;
+          gap: 1em;
         }
       }
       .socials {
         margin-top: -5em;
-        padding-bottom: 5em;
+        padding: 5em;
+        flex: 25%;
+
         .newsletter {
           padding: 0;
           flex-direction: row;
@@ -127,6 +136,10 @@ export const StyledFooter = styled.footer`
           input {
             width: 50em;
           }
+        }
+        .social-links {
+          justify-content: flex-end;
+          padding: 5em 0;
         }
       }
     }

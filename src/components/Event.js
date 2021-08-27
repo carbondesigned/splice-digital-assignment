@@ -27,11 +27,13 @@ const StyledEvent = styled.li`
   flex-direction: column;
   justify-content: space-evenly;
   color: ${(p) => p.theme.colors.darkAlt};
+  text-align: center;
 
   .type {
     position: relative;
     font-size: ${(p) => p.theme.fonts.xlgParagraph};
     font-weight: 700;
+    /* text-align: center; */
 
     &::after {
       content: "";
@@ -50,9 +52,9 @@ const StyledEvent = styled.li`
 
   .content {
     line-height: 1.5;
-    padding: 0 5em;
+
     .title {
-      font-size: ${(p) => p.theme.fonts.xlgParagraph};
+      font-size: ${(p) => p.theme.fonts.paragraph};
     }
   }
 
@@ -61,6 +63,7 @@ const StyledEvent = styled.li`
     gap: 1em;
     align-items: center;
     font-size: clamp(1.245em, 3vw, 1.925em);
+    flex-direction: column;
 
     .cta {
       text-decoration: underline;
@@ -72,13 +75,23 @@ const StyledEvent = styled.li`
     }
   }
 
+  @media only screen and (min-width: 768px) {
+    text-align: left;
+    .type {
+    }
+
+    .snip {
+      flex-direction: row;
+    }
+  }
+
   @media only screen and (min-width: 1400px) {
     flex-direction: row;
     margin-right: 2em;
 
     .type {
       flex: 25%;
-      &::after {
+      t &::after {
         top: 0;
       }
     }

@@ -31,17 +31,15 @@ const StyledEvent = styled.li`
 
   .type {
     position: relative;
-    font-size: ${(p) => p.theme.fonts.xlgParagraph};
+    font-size: ${(p) => p.theme.fonts.lgParagraph};
     font-weight: 700;
-    /* text-align: center; */
 
     &::after {
       content: "";
       background-image: url(${(p) => p.bullet});
       position: absolute;
       left: -1em;
-      bottom: 50%;
-      transform: translateY(50%);
+      top: 0;
       height: 10px;
       width: 10px;
       background-repeat: no-repeat;
@@ -91,13 +89,19 @@ const StyledEvent = styled.li`
 
     .type {
       flex: 25%;
-      t &::after {
-        top: 0;
+      margin: 0;
+
+      &::after {
+        bottom: 50%;
+        transform: translateY(50%);
+        height: 15px;
+        width: 15px;
       }
     }
 
     .content {
       flex: 100%;
+      padding: 0 2em;
     }
   }
 `;

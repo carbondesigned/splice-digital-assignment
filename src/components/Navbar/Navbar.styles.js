@@ -24,22 +24,6 @@ export const StyledNavbar = styled.nav`
     display: none;
   }
 
-  .hamburger {
-    width: 2.25em;
-    height: 1.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-
-    .line {
-      width: 100%;
-      height: 0.25em;
-      background-color: ${(p) => p.theme.colors.secondary};
-      border-radius: 1em;
-    }
-  }
-
   @media only screen and (min-width: 768px) {
     .hamburger {
       display: none;
@@ -76,5 +60,38 @@ export const StyledNavbar = styled.nav`
       padding: 0 10em;
       gap: 5em;
     }
+  }
+`;
+
+export const StyledHamburger = styled.div`
+  width: 2.25em;
+  height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 10;
+
+  .line {
+    width: 100%;
+    height: 0.25em;
+    background-color: ${(p) =>
+      p.openSidebar ? "#fff" : p.theme.colors.secondary};
+    border-radius: 1em;
+    transition: 300ms;
+  }
+
+  .line1 {
+    transform: ${(p) =>
+      p.openSidebar ? "rotate(45deg) translate(0px, 9px)" : "0"};
+  }
+
+  .line2 {
+    opacity: ${(p) => (p.openSidebar ? "0" : "1")};
+  }
+
+  .line3 {
+    transform: ${(p) =>
+      p.openSidebar ? "rotate(-45deg) translate(0px, -9px)" : "0"};
   }
 `;

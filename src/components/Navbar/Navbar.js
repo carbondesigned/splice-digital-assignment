@@ -1,22 +1,35 @@
 import React, { useState } from "react";
 import Subnav from "../Subnav/Subnav";
 
-import { StyledNavbar } from "./Navbar.styles";
+import Sidebar from "../Sidebar";
+
+import { StyledNavbar, StyledHamburger } from "./Navbar.styles";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+  const [openSidebar, setOpenSidebar] = useState(false);
 
   const clickHandler = () => {
     setActive(!active);
   };
+
+  const openSidebarToggle = () => {
+    setOpenSidebar(!openSidebar);
+  };
+  console.log(openSidebar);
+
   return (
     <StyledNavbar>
       <div className="logo">Teradyne</div>
-      <div className="hamburger">
+      <StyledHamburger
+        className="hamburger"
+        onClick={openSidebarToggle}
+        openSidebar={openSidebar}
+      >
         <div className="line1 line"></div>
-        <div className="line2 line"></div>
+        <div className="line line2"></div>
         <div className="line3 line"></div>
-      </div>
+      </StyledHamburger>
       <ul className="links">
         <li onClick={clickHandler} className="link">
           Products
@@ -38,6 +51,7 @@ const Navbar = () => {
         </li>
       </ul>
       <Subnav active={active} />
+      {openSidebar && <Sidebar />}
     </StyledNavbar>
   );
 };

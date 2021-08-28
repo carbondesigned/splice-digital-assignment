@@ -48,6 +48,7 @@ const StyledSidebar = styled.div`
 
     .link {
       list-style: none;
+      color: #fff;
     }
   }
 

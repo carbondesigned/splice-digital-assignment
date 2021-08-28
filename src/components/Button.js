@@ -27,7 +27,7 @@ const StyledButton = styled.div`
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 0.5em;
-  font-size: clamp(0.75em, 3vw, 1.825em);
+  font-size: clamp(0.75em, 3vw, 1.725em);
   width: fit-content;
   white-space: nowrap;
   cursor: pointer;

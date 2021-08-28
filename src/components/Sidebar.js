@@ -4,14 +4,14 @@ import styled from "styled-components";
 const Sidebar = () => {
   return (
     <StyledSidebar>
-      <h2 className="logo">TERADYNE</h2>
-      <ul className="links">
-        <li className="link">Products</li>
-        <li className="link">Industries</li>
-        <li className="link">Applications</li>
-        <li className="link">Services</li>
-        <li className="link">Support</li>
-        <li className="link">Company</li>
+      <h2 className="logo-s">TERADYNE</h2>
+      <ul className="links-s">
+        <li className="link-s">Products</li>
+        <li className="link-s">Industries</li>
+        <li className="link-s">Applications</li>
+        <li className="link-s">Services</li>
+        <li className="link-s">Support</li>
+        <li className="link-s">Company</li>
       </ul>
     </StyledSidebar>
   );
@@ -31,13 +31,14 @@ const StyledSidebar = styled.div`
   animation: fade 500ms;
   color: #fff;
 
-  .logo {
+  .logo-s {
     color: #fff;
     font-size: ${(p) => p.theme.fonts.title};
     text-align: center;
+    font-weight: 700;
   }
 
-  .links {
+  .links-s {
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -47,7 +48,7 @@ const StyledSidebar = styled.div`
     margin: 0;
     padding: 0;
 
-    .link {
+    .link-s {
       list-style: none;
       color: #fff;
     }

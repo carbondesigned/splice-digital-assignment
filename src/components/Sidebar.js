@@ -29,6 +29,7 @@ const StyledSidebar = styled.div`
   flex-direction: column;
   padding: 10em;
   animation: fade 500ms;
+  color: #fff;
 
   .logo {
     color: #fff;

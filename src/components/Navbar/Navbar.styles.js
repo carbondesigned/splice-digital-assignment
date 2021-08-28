@@ -37,6 +37,7 @@ export const StyledNavbar = styled.nav`
       li {
         list-style: none;
         font-size: ${(p) => p.theme.fonts.links};
+        cursor: pointer;
       }
     }
   }
